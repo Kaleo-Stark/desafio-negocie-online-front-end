@@ -1,0 +1,8 @@
+<div class="container-origin">
+    <label> Origem da consulta: {{ origin }} </label>
+</div>
+
+<div *ngFor="let field of fields" class="container-input">
+    <label for="{{field}}">{{ field }}</label>
+    <input type="text" id="{{field}}" [(ngModel)]="data[field]" disabled>
+</div>

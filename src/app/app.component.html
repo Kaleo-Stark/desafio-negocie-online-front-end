@@ -1,0 +1,15 @@
+<div class="container-main flex-row">
+  <app-data-cep [data]="dataCEP" [origin]="origin"></app-data-cep>
+
+  <div class="container-panel-control flex-column">
+    <label for="CEP-code">CEP</label>
+    <input type="text" placeholder="Ex: 00000-000" [(ngModel)]="CEP" id="CEP-code">
+
+    <button (click)="consultCEPApiExternal()">Consultar CEP em API Externa</button>
+
+    <button (click)="consultCEPApiInternal()">Consultar CEP no Banco de Dados</button>
+
+    <button (click)="saveCEPApiInternal()">Salvar CEP no Banco de Dados</button>
+
+  </div>
+</div>
